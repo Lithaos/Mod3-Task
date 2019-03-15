@@ -1,0 +1,228 @@
+/* Variables */
+$basic-color: #FED136;
+$dark-text-color: #222222;
+$dark-subtext-color: #808080;
+$theme-font: 'Parisienne',
+cursive;
+
+/* Global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-title {
+    color: $dark-text-color;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.section-subtitle {
+    color: $dark-subtext-color;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 70px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Header */
+nav {
+    position: absolute;
+    display: flex;
+    top: 50px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 50px;
+}
+
+nav .links a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.links {
+    line-height: 50px;
+}
+
+.links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav .brand {
+    padding-left: 25%;
+    width: 45%;
+}
+
+nav .brand a {
+    color: $basic-color;
+    font-family: $theme-font;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* Splash */
+.splash {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.splash img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.splash-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    height: auto;
+}
+
+.splash-text h2 {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.splash-text h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.splash-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: $basic-color;
+    margin: 30px;
+    padding: 25px 55px;
+    border-radius: 5px;
+}
+
+
+/* Services */
+.services {
+    padding-bottom: 100px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card i {
+    font-size: 40px;
+    color: $basic-color;
+    border: 3px solid $basic-color;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.card-title {
+    color: $dark-text-color;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.card-text {
+    color: $dark-subtext-color;
+}
+
+/* Portfolio */
+.portfolio {
+    background-color: #F7F7F7;
+    padding-bottom: 60px;
+}
+
+.portfolio img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-text h3 {
+    padding-bottom: 5px;
+}
+
+.portfolio-text {
+    margin-top: -3px;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+
+.portfolio-text p {
+    font-style: italic;
+    color: $dark-subtext-color;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+    line-height: 50px;
+}
+
+footer div {
+    text-align: center;
+    color: $dark-subtext-color;
+}
+
+footer a {
+    font-size: 0;
+}
+
+footer a i {
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $dark-text-color;
+}
+
+footer a i:before {
+    line-height: 50px;
+}
+
+/* Media */
+
+@media (max-width: 760px) {
+    nav {
+        display: block;
+        position: initial;
+        background-color: $dark-text-color;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .links ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    .links li {
+        display: block;
+    }
+}
